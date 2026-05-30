@@ -1,0 +1,5 @@
+bad_cloudflare_r2_url:
+  type: string
+
+s3_cdn_url:
+  type: string
