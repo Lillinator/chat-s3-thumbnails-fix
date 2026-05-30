@@ -22,8 +22,8 @@ Once installed, configure the two settings in the Theme Component UI:
 
 | Setting | Description | Example |
 | :--- | :--- | :--- |
-| `bad_cloudflare_r2_url` | The raw, broken bucket URL that Discourse is leaking to the browser. You can find this by inspecting a broken chat image. | `disco-docs-uploads.e72838402cd25cd74f272f3e35133843.eu.r2.cloudflarestorage.com` |
-| `s3_cdn_url` | Your actual, public-facing CDN domain that *should* be used. | `uploads.disco-docs.com` |
+| `raw_s3_bucket_url` | The raw bucket URL that Discourse is leaking to the browser. You can find this by inspecting a broken/bypassed chat image. | `my-forum.s3.amazonaws.com` or `...eu.r2.cloudflarestorage.com` |
+| `s3_cdn_url` | The exact domain you have configured in your Discourse `s3_cdn_url` setting. | `uploads.disco-docs.com` |
 
 > **Note:** Do not include `https://` or trailing slashes in the settings. Just use the raw domains!
 
