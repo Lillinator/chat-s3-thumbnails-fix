@@ -5,7 +5,7 @@ A lightweight Discourse Theme Component to fix broken chat thumbnails when using
 ## 👩‍💻 Overview
 Currently, Discourse Core has a bug in its Chat serializers. While standard forum posts properly wrap images in your configured CDN domain, Chat bypasses this logic. It outputs the raw, internal S3 bucket URL directly to the browser. 
 
-Because providers like Cloudflare R2 are "secure-by-default" and block unauthenticated access to the raw `.cloudflarestorage.com` endpoint, Chat images completely break (returning `403 Forbidden`). 
+Because providers like Cloudflare R2 are "secure-by-default" and block unauthenticated access to the raw `.cloudflarestorage.com` endpoint, Chat thumbmail images break. 
 
 This Theme Component intercepts the broken URLs *only* within newly injected Chat DOM elements and instantly swaps them for your correct CDN domain. It catches `src`, `srcset`, `href`, and `data-src` attributes without causing UI lag or freezing the browser.
 
