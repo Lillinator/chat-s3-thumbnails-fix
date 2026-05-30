@@ -19,5 +19,5 @@ Once installed, configure the two settings:
 
 > **Note:** Do not include `https://` or trailing slashes in the settings - just use the raw domains.
 
-## 🏁 Performance
+## 💡 Note about performance
 The `MutationObserver` in this component has been strictly scoped. Rather than running `querySelectorAll` against the entire webpage every time a user scrolls or types, it strictly evaluates the `addedNodes` payload. This guarantees that your Chat UI remains fast, even during heavy server loads or rapid message ingestion.
